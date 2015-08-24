@@ -38,7 +38,7 @@ DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamCon
 /vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so"
 
 # Codecs
-CODECS="/etc/mtk_omx_core.cfg \
+CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/libMtkOmxAdpcmDec.so /lib/libMtkOmxAdpcmEnc.so /lib/libMtkOmxAlacDec.so /lib/libMtkOmxApeDec.so \
 /lib/libMtkOmxCore.so /lib/libMtkOmxFlacDec.so /lib/libMtkOmxG711Dec.so /lib/libMtkOmxGsmDec.so \
 /lib/libMtkOmxMp3Dec.so /lib/libMtkOmxRawDec.so /lib/libMtkOmxVdec.so /lib/libMtkOmxVenc.so /lib/libMtkOmxVorbisEnc.so \
