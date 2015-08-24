@@ -32,6 +32,11 @@ GL="/vendor/bin/pvrsrvctl \
 /lib/libvcodec_utility.so /lib/libvp8dec_sa.ca7.so /lib/libvp8enc_sa.ca7.so \
 /lib/libperfservice.so /lib/libperfservicenative.so"
 
+# Digital Restrictions Management
+DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
+/vendor/lib/drm/libdrmwvmplugin.so \
+/vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so"
+
 #
 # ccci_mdinit starts, depends on additional services:
 # - drvbd - unix socket connection - no longer exists on Lollipop+
@@ -52,9 +57,14 @@ RIL="/lib/mtk-ril.so /lib/librilmtk.so /lib/libaed.so \
 AUDIO="/lib/hw/audio.primary.mt6595.so /lib/libblisrc.so /lib/libspeech_enh_lib.so /lib/libaudiocustparam.so /lib/libaudiosetting.so \
 /lib/libaudiocompensationfilter.so /lib/libcvsd_mtk.so /lib/libmsbc_mtk.so /lib/libaudiocomponentengine.so \
 /lib/libblisrc32.so /lib/libbessound_hd_mtk.so /lib/libmtklimiter.so /lib/libmtkshifter.so /lib/libaudiodcrflt.so \
-/lib/libbluetoothdrv.so"
+/lib/libtfa9890_interface.so /lib/libtinyxml.so \
+/lib/libbluetoothdrv.so /lib/libbluetooth_mtk.so"
 
-SYSTEM="$FIRMWARE $WIFI $GL $RIL $AUDIO"
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $RIL $AUDIO"
+
+move_files () {
+	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
+}
 
 # get data from a device
 if [ -z $SOURCE ]; then
@@ -62,6 +72,7 @@ if [ -z $SOURCE ]; then
     T=$TARGET/$FILE
     adb pull /system/$FILE $T
   done
+  move_files
   exit 0
 fi
 
@@ -72,5 +83,6 @@ for FILE in $SYSTEM ; do
   mkdir -p $(dirname $T) || exit 1
   rsync -av --delete $S $T || exit 1
 done
+move_files
 exit 0
 
