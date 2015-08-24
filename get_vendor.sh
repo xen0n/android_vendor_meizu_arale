@@ -37,6 +37,17 @@ DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamCon
 /vendor/lib/drm/libdrmwvmplugin.so \
 /vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so"
 
+# Codecs
+CODECS="/lib/libMtkOmxAdpcmDec.so /lib/libMtkOmxAdpcmEnc.so /lib/libMtkOmxAlacDec.so /lib/libMtkOmxApeDec.so \
+/lib/libMtkOmxCore.so /lib/libMtkOmxFlacDec.so /lib/libMtkOmxG711Dec.so /lib/libMtkOmxGsmDec.so \
+/lib/libMtkOmxMp3Dec.so /lib/libMtkOmxRawDec.so /lib/libMtkOmxVdec.so /lib/libMtkOmxVenc.so /lib/libMtkOmxVorbisEnc.so \
+/lib/libClearMotionFW.so /lib/libmhalImageCodec.so /lib/libmmprofile.so /lib/libmtb.so \
+/lib/libJpgDecPipe.so /lib/libGdmaScalerPipe.so /lib/libSwJpgCodec.so /lib/libJpgEncPipe.so /lib/libmtkjpeg.so \
+/lib/libstagefright_memutil.so /lib/libstagefright_omx.so \
+/lib/libstagefright_amrnb_common.so /lib/libstagefright_avc_common.so /lib/libstagefright_enc_common.so \
+/lib/libstagefright_mzmpeg2ts.so /lib/libstagefright_soft_ffmpegadec.so \
+"
+
 #
 # ccci_mdinit starts, depends on additional services:
 # - drvbd - unix socket connection - no longer exists on Lollipop+
@@ -70,7 +81,7 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $RIL $AUDIO $BLUETOOTH"
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
