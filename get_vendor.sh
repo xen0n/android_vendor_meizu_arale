@@ -107,7 +107,11 @@ CAMERA="/lib/hw/camera.mt6595.so \
 /lib/lib3a.so /lib/lib3a_sample.so /lib/libgraphite2.so /lib/libn3d3a.so /lib/libtiff.so /lib/libtouchfilter.so \
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA"
+SENSORS="/lib/hw/sensors.mt6595.so \
+/lib/libinvensense_hal.so /lib/libmllite.so \
+"
+
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
