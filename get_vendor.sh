@@ -35,7 +35,10 @@ GL="/vendor/bin/pvrsrvctl \
 # Digital Restrictions Management
 DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
 /vendor/lib/drm/libdrmwvmplugin.so \
-/vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so"
+/vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so \
+/lib/libdrmdecrypt.so /lib/libdrmmtkutil.so /lib/libdrmmtkwhitelist.so \
+/lib/libnvramagentclient.so \
+"
 
 # Codecs
 CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
@@ -43,6 +46,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/libMtkOmxCore.so /lib/libMtkOmxFlacDec.so /lib/libMtkOmxG711Dec.so /lib/libMtkOmxGsmDec.so \
 /lib/libMtkOmxMp3Dec.so /lib/libMtkOmxRawDec.so /lib/libMtkOmxVdec.so /lib/libMtkOmxVenc.so /lib/libMtkOmxVorbisEnc.so \
 /lib/libClearMotionFW.so /lib/libmhalImageCodec.so /lib/libmmprofile.so /lib/libmtb.so \
+/lib/libmjc.so /lib/libMJCjni.so \
 /lib/libJpgDecPipe.so /lib/libGdmaScalerPipe.so /lib/libSwJpgCodec.so /lib/libJpgEncPipe.so /lib/libmtkjpeg.so \
 /lib/libstagefright_memutil.so \
 /lib/libstagefright_amrnb_common.so /lib/libstagefright_avc_common.so /lib/libstagefright_enc_common.so \
