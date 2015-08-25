@@ -95,7 +95,19 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH"
+CAMERA="/lib/hw/camera.mt6595.so \
+/lib/libcamera_client_mtk.so /lib/libcam.halsensor.so /lib/libcam_hwutils.so /lib/libcam_utils.so /lib/libmeizucamera.so /lib/libmmsdkservice.so \
+/lib/libcam1_utils.so /lib/libcamalgo.so /lib/libcam.camadapter.so /lib/libcam.camnode.so /lib/libcam.camshot.so /lib/libcam.client.so \
+/lib/libcam.common.meizu.so /lib/libcam.device1.so /lib/libcamdrv.so /lib/libcameracustom.so /lib/libcam.exif.so /lib/libcam.iopipe.so \
+/lib/libcam.jni.lomohaljni.so /lib/libcam.metadata.so /lib/libcam_mmp.so /lib/libcam.paramsmgr.so /lib/libcam_platform.so \
+/lib/libcam.sdkclient.so /lib/libcam.utils.sensorlistener.so /lib/libcam.utils.so \
+/lib/libfeatureio.so /lib/libimageio_plat_drv.so /lib/libimageio.so /lib/libmatv_cust.so \
+/lib/libmpoencoder.so /lib/libmpo.so \
+/lib/libmtk_mmutils.so /vendor/lib/libsfb.so /lib/libvideo_render.so /lib/libvideostabilizer.so \
+/lib/lib3a.so /lib/lib3a_sample.so /lib/libgraphite2.so /lib/libn3d3a.so /lib/libtiff.so /lib/libtouchfilter.so \
+"
+
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
