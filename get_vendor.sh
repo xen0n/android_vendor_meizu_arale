@@ -87,6 +87,7 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
 /lib/libccci_util.so \
+/bin/terservice /lib/libterservice.so \
 "
 
 AUDIO="/lib/hw/audio.primary.mt6595.so /lib/libblisrc.so /lib/libspeech_enh_lib.so /lib/libaudiocustparam.so /lib/libaudiosetting.so \
