@@ -122,7 +122,11 @@ SENSORS="/lib/hw/sensors.mt6595.so \
 /lib/libinvensense_hal.so /lib/libmllite.so \
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS"
+GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps \
+/lib/libssladp.so \
+"
+
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
