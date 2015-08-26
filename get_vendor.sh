@@ -9,11 +9,12 @@ TARGET=.
 FIRMWARE="/etc/firmware/"
 
 #
-# wmt_loader init kernel device modules, and loades a driver for /dev/stpwmt, then
-# 6620_launcher load a firmware to the CPU using /dev/stpwmt.
-# mt6572_82_patch_e1_0_hdr.bin, mt6572_82_patch_e1_1_hdr.bin - wifi firmware.
+# wmt_loader init kernel device modules, then waits for autokd. after autokd finishes its work,
+# wmt_loader inits /dev/stpwmt, then 6620_launcher proceeds to load a firmware to the CPU using /dev/stpwmt.
 #
-WIFI="/etc/wifi/ /bin/6620_wmt_lpbk /bin/6620_launcher /bin/6620_wmt_concurrency /bin/wmt_loader"
+WIFI="/etc/wifi/ /bin/6620_wmt_lpbk /bin/6620_launcher /bin/6620_wmt_concurrency /bin/wmt_loader \
+/bin/autokd \
+"
 
 # 
 # gralloc && hwcomposer - hardware layer. rest is userspace lib.so layer.
