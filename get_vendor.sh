@@ -82,7 +82,7 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/mtkrild /bin/mtkrildmd2 /lib/mtk-ril.so /lib/mtk-rilmd2.so /lib/librilmtk.so /lib/libaed.so \
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
 /lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
-/bin/gsm0710muxd /bin/gsm0710muxdmd2 /bin/ccci_mdinit /bin/aee /bin/mdlogger \
+/bin/ccci_mdinit /bin/aee /bin/mdlogger \
 /bin/dualmdlogger /bin/emdlogger1 /lib/libmdloggerrecycle.so /bin/ccci_fsd \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
