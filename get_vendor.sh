@@ -74,11 +74,16 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 # ccci_mdinit loads modem_1_wg_n.img firmware to the CPU, waits for NVRAM to init using ENV variable.
 # then starts the modem CPU. on success starts rest services mdlogger, gsm0710muxd ...
 #
-RIL="/lib/mtk-ril.so /lib/librilmtk.so /lib/libaed.so \
+RIL="/bin/md_ctrl /bin/muxreport \
+/bin/mtkrild /bin/mtkrildmd2 /lib/mtk-ril.so /lib/mtk-rilmd2.so /lib/librilmtk.so /lib/libaed.so \
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
 /lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
-/bin/gsm0710muxd /bin/ccci_mdinit /bin/aee /bin/mdlogger \
-/bin/dualmdlogger /lib/libmdloggerrecycle.so /bin/ccci_fsd"
+/bin/gsm0710muxd /bin/gsm0710muxdmd2 /bin/ccci_mdinit /bin/aee /bin/mdlogger \
+/bin/dualmdlogger /bin/emdlogger1 /lib/libmdloggerrecycle.so /bin/ccci_fsd \
+/bin/atci_service /bin/atcid /bin/audiocmdservice_atci \
+/lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
+/lib/libccci_util.so \
+"
 
 AUDIO="/lib/hw/audio.primary.mt6595.so /lib/libblisrc.so /lib/libspeech_enh_lib.so /lib/libaudiocustparam.so /lib/libaudiosetting.so \
 /lib/libaudiocompensationfilter.so /lib/libcvsd_mtk.so /lib/libmsbc_mtk.so /lib/libaudiocomponentengine.so \
