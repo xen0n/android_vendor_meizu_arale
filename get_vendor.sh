@@ -122,8 +122,8 @@ SENSORS="/lib/hw/sensors.mt6595.so \
 /lib/libinvensense_hal.so /lib/libmllite.so \
 "
 
-GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld \
-/lib/libssladp.so /lib/libmnl.so \
+GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW \
+/lib/libcurl.so /lib/libssladp.so /lib/libmnl.so \
 "
 
 SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS"
