@@ -31,7 +31,9 @@ GL="/vendor/bin/pvrsrvctl \
 /lib/libgui_ext.so /lib/libui_ext.so /lib/libui.so \
 /lib/libvcodecdrv.so /lib/libmp4enc_sa.ca7.so /lib/libvc1dec_sa.ca7.so /lib/libvcodec_oal.so \
 /lib/libvcodec_utility.so /lib/libvp8dec_sa.ca7.so /lib/libvp8enc_sa.ca7.so \
-/lib/libperfservice.so /lib/libperfservicenative.so"
+/lib/libperfservice.so /lib/libperfservicenative.so \
+/bin/aal /bin/guiext-server /bin/pq \
+"
 
 # Digital Restrictions Management
 DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
@@ -61,6 +63,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/extend/libExtractor.FLAC.so /lib/extend/libExtractor.FLV.so /lib/extend/libExtractor.MP3.so /lib/extend/libExtractor.MPEG.so \
 /lib/extend/libExtractor.MPEG2TS.so /lib/extend/libExtractor.MPEG4.so /lib/extend/libExtractor.REALMEDIA.so /lib/extend/libExtractor.SCADISO.so \
 /lib/extend/libExtractor.WAV.so /lib/extend/libExtractor.matroska.so \
+/bin/MtkCodecService \
 "
 
 #
@@ -82,7 +85,7 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/mtkrild /bin/mtkrildmd2 /lib/mtk-ril.so /lib/mtk-rilmd2.so /lib/librilmtk.so /lib/libaed.so \
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
 /lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
-/bin/ccci_mdinit /bin/aee /bin/mdlogger \
+/bin/ccci_mdinit /bin/aee /bin/mdlogger /bin/em_svr \
 /bin/dualmdlogger /bin/emdlogger1 /lib/libmdloggerrecycle.so /bin/ccci_fsd \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
@@ -120,13 +123,19 @@ CAMERA="/lib/hw/camera.mt6595.so \
 
 SENSORS="/lib/hw/sensors.mt6595.so \
 /lib/libinvensense_hal.so /lib/libmllite.so \
+/bin/geomagneticd /bin/magd /bin/orientationd \
 "
 
 GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW \
 /lib/libcurl.so /lib/libssladp.so /lib/libmnl.so \
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS"
+MISC="/bin/akmd8963 /bin/akmd8975 /bin/ami304d /bin/bmm050d /bin/mc6420d /bin/memsicd /bin/memsicd3416x \
+/bin/s62xd /bin/thermal /bin/thermald /bin/thermal_manager \
+/bin/ppl_agent /bin/matv \
+"
+
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS $MISC"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
