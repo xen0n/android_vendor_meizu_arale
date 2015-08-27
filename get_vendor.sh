@@ -82,7 +82,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 # called permission_check popped out...
 #
 RIL="/bin/md_ctrl /bin/muxreport \
-/bin/mtkrild /bin/mtkrildmd2 /lib/mtk-ril.so /lib/mtk-rilmd2.so /lib/librilmtk.so /lib/libaed.so \
+/bin/mtkrild /bin/mtkrildmd2 /lib/mtk-ril.so /lib/mtk-rilmd2.so /lib/librilmtk.so /lib/librilmtkmd2.so /lib/libaed.so \
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
 /lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
 /bin/ccci_mdinit /bin/aee /bin/mdlogger /bin/em_svr \
@@ -90,6 +90,9 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
 /lib/libccci_util.so \
+/lib/libem_aitalk5.so /lib/libem_lte_jni.so /lib/libem_support_jni.so \
+/lib/libem_bt_jni.so /lib/libem_modem_jni.so /lib/libem_usb_jni.so \
+/lib/libem_gpio_jni.so /lib/libem_sensor_jni.so /lib/libem_wifi_jni.so \
 /bin/terservice /lib/libterservice.so \
 "
 
