@@ -41,6 +41,7 @@ DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamCon
 /vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so \
 /lib/libdrmdecrypt.so /lib/libdrmmtkutil.so /lib/libdrmmtkwhitelist.so \
 /lib/libnvramagentclient.so \
+/lib/drm/libdrmctaplugin.so /lib/drm/libdrmmtkplugin.so \
 "
 
 # Codecs
@@ -63,7 +64,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/extend/libExtractor.FLAC.so /lib/extend/libExtractor.FLV.so /lib/extend/libExtractor.MP3.so /lib/extend/libExtractor.MPEG.so \
 /lib/extend/libExtractor.MPEG2TS.so /lib/extend/libExtractor.MPEG4.so /lib/extend/libExtractor.REALMEDIA.so /lib/extend/libExtractor.SCADISO.so \
 /lib/extend/libExtractor.WAV.so /lib/extend/libExtractor.matroska.so \
-/bin/MtkCodecService \
+/bin/MtkCodecService /lib/libBnMtkCodec.so \
 "
 
 #
