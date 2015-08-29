@@ -101,7 +101,7 @@ AUDIO="/lib/hw/audio.primary.mt6595.so /lib/libblisrc.so /lib/libspeech_enh_lib.
 /lib/libaudiocompensationfilter.so /lib/libcvsd_mtk.so /lib/libmsbc_mtk.so /lib/libaudiocomponentengine.so \
 /lib/libblisrc32.so /lib/libbessound_hd_mtk.so /lib/libmtklimiter.so /lib/libmtkshifter.so /lib/libaudiodcrflt.so \
 /lib/libtfa9890_interface.so /lib/libtinyxml.so \
-/etc/tfa98xx/ \
+/etc/tfa98xx/ /etc/audio_device.xml \
 "
 # bluetooth bits moved to individual section
 
