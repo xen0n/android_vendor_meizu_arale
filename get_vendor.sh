@@ -136,13 +136,15 @@ GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW \
 /lib/libcurl.so /lib/libssladp.so /lib/libmnl.so \
 "
 
+CHARGER="/bin/kpoc_charger /lib/libshowlogo.so /lib/libsuspend.so"
+
 MISC="/bin/akmd8963 /bin/akmd8975 /bin/ami304d /bin/bmm050d /bin/mc6420d /bin/memsicd /bin/memsicd3416x \
 /bin/s62xd /bin/thermal /bin/thermald /bin/thermal_manager \
 /bin/ppl_agent /bin/matv \
 /bin/immvibed /lib/libpparam.so \
 "
 
-SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS $MISC"
+SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS $CHARGER $MISC"
 
 move_files () {
 	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
