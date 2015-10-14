@@ -112,7 +112,8 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libextsys.so /lib/libextsys_jni.so \
 /lib/libpalsecurity.so /lib/libpalwlan_mtk.so \
 /lib/libbluetoothem_mtk.so /lib/libbluetooth_relayer.so \
-/lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so
+/lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so \
+/vendor/lib/hw/bluetooth.blueangel.so /vendor/lib/hw/audio.a2dp.blueangel.so \
 "
 
 CAMERA="/lib/hw/camera.mt6595.so \
@@ -163,6 +164,8 @@ rename_file () {
 
 move_files () {
 	rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
+	rename_file $1 vendor/lib/hw/bluetooth.blueangel.so vendor/lib/hw/bluetooth.mt6595.so
+	rename_file $1 vendor/lib/hw/audio.a2dp.blueangel.so vendor/lib/hw/audio.a2dp.mt6595.so
 }
 
 # get data from a device
