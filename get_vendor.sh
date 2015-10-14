@@ -146,8 +146,23 @@ MISC="/bin/akmd8963 /bin/akmd8975 /bin/ami304d /bin/bmm050d /bin/mc6420d /bin/me
 
 SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS $CHARGER $MISC"
 
+rename_file () {
+	local src
+	local dest
+
+	if [[ "x$1" == "x-b" ]]; then
+		src=$3
+		dest=$2
+	else
+		src=$1
+		dest=$2
+	fi
+
+	mv $TARGET/$src $TARGET/$dest
+}
+
 move_files () {
-	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
+	rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
 }
 
 # get data from a device
@@ -161,6 +176,7 @@ if [ -z $SOURCE ]; then
 fi
 
 # get data from folder
+move_files -b
 for FILE in $SYSTEM ; do
   S=$SOURCE/$FILE
   T=$TARGET/$FILE
