@@ -113,7 +113,8 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libpalsecurity.so /lib/libpalwlan_mtk.so \
 /lib/libbluetoothem_mtk.so /lib/libbluetooth_relayer.so \
 /lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so \
-/vendor/lib/hw/bluetooth.blueangel.so /vendor/lib/hw/audio.a2dp.blueangel.so \
+/vendor/lib/hw/audio.a2dp.blueangel.so \
+/lib/libbt-aptX-ARM-4.2.2.so /lib/libsbccodec.so \
 "
 
 CAMERA="/lib/hw/camera.mt6595.so \
@@ -164,7 +165,6 @@ rename_file () {
 
 move_files () {
 	rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
-	rename_file $1 vendor/lib/hw/bluetooth.blueangel.so vendor/lib/hw/bluetooth.mt6595.so
 	rename_file $1 vendor/lib/hw/audio.a2dp.blueangel.so vendor/lib/hw/audio.a2dp.mt6595.so
 }
 
