@@ -163,7 +163,8 @@ rename_file () {
 }
 
 move_files () {
-	rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
+	# unneeded as of Lollipop
+	#rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
 #	rename_file $1 vendor/lib/hw/audio.a2dp.blueangel.so vendor/lib/hw/audio.a2dp.mt6595.so
 }
 
