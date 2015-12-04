@@ -32,7 +32,7 @@ GL="/vendor/bin/pvrsrvctl \
 /lib/libvcodecdrv.so /lib/libmp4enc_sa.ca7.so /lib/libvc1dec_sa.ca7.so /lib/libvcodec_oal.so \
 /lib/libvcodec_utility.so /lib/libvp8dec_sa.ca7.so /lib/libvp8enc_sa.ca7.so \
 /lib/libperfservice.so /lib/libperfservicenative.so \
-/bin/aal /bin/guiext-server /bin/pq \
+/bin/guiext-server /bin/pq \
 "
 
 # Digital Restrictions Management
@@ -112,7 +112,8 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libextsys.so /lib/libextsys_jni.so \
 /lib/libpalsecurity.so /lib/libpalwlan_mtk.so \
 /lib/libbluetoothem_mtk.so /lib/libbluetooth_relayer.so \
-/lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so
+/lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so \
+/lib/libbt-aptX-ARM-4.2.2.so /lib/libsbccodec.so \
 "
 
 CAMERA="/lib/hw/camera.mt6595.so \
@@ -146,8 +147,26 @@ MISC="/bin/akmd8963 /bin/akmd8975 /bin/ami304d /bin/bmm050d /bin/mc6420d /bin/me
 
 SYSTEM="$FIRMWARE $WIFI $GL $DRM $CODECS $RIL $AUDIO $BLUETOOTH $CAMERA $SENSORS $GPS $CHARGER $MISC"
 
+rename_file () {
+	local src
+	local dest
+
+	if [[ "x$1" == "x-b" ]]; then
+		src=$3
+		dest=$2
+	else
+		src=$1
+		dest=$2
+	fi
+
+	mv $TARGET/$src $TARGET/$dest
+}
+
 move_files () {
-	mv $TARGET/lib/hw/audio.primary.mt6595.so $TARGET/lib/libaudio.primary.default.so
+	# unneeded as of Lollipop
+	#rename_file $1 lib/hw/audio.primary.mt6595.so lib/libaudio.primary.default.so
+	#rename_file $1 vendor/lib/hw/audio.a2dp.blueangel.so vendor/lib/hw/audio.a2dp.mt6595.so
+	true
 }
 
 # get data from a device
@@ -161,6 +180,7 @@ if [ -z $SOURCE ]; then
 fi
 
 # get data from folder
+move_files -b
 for FILE in $SYSTEM ; do
   S=$SOURCE/$FILE
   T=$TARGET/$FILE
