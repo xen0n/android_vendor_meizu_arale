@@ -39,7 +39,7 @@ GL="/vendor/bin/pvrsrvctl \
 DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
 /vendor/lib/drm/libdrmwvmplugin.so \
 /vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so \
-/lib/libdrmdecrypt.so /lib/libdrmmtkutil.so /lib/libdrmmtkwhitelist.so \
+/lib/libdrmmtkutil.so /lib/libdrmmtkwhitelist.so \
 /lib/libnvramagentclient.so \
 /lib/drm/libdrmctaplugin.so /lib/drm/libdrmmtkplugin.so \
 "
@@ -52,17 +52,16 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/libClearMotionFW.so /lib/libmhalImageCodec.so /lib/libmmprofile.so /lib/libmtb.so \
 /lib/libmjc.so /lib/libMJCjni.so \
 /lib/libJpgDecPipe.so /lib/libGdmaScalerPipe.so /lib/libSwJpgCodec.so /lib/libJpgEncPipe.so /lib/libmtkjpeg.so \
-/lib/libstagefright_memutil.so \
 /lib/libstagefright_amrnb_common.so /lib/libstagefright_avc_common.so /lib/libstagefright_enc_common.so \
-/lib/libstagefright_mzmpeg2ts.so /lib/libstagefright_soft_ffmpegadec.so \
-/lib/extend/libCodec.ac3.so /lib/extend/libCodec.adpcmdec.so /lib/extend/libCodec.alacdec.so /lib/extend/libCodec.ape.so \
+/lib/libstagefright_soft_ffmpegadec.so \
+/lib/extend/libCodec.adt.so /lib/extend/libCodec.adpcmdec.so /lib/extend/libCodec.alacdec.so /lib/extend/libCodec.ape.so \
 /lib/extend/libCodec.dsddec.so /lib/extend/libCodec.dts.so /lib/extend/libCodec.lpcm.so /lib/extend/libCodec.mp3dec.so \
 /lib/extend/libCodec.mp3enc.so /lib/extend/libCodec.mpegdec.so /lib/extend/libCodec.radec.so /lib/extend/libCodec.raw.so \
 /lib/extend/libCodec.rvdec.so /lib/extend/libCodec.wmadec.so \
 /lib/extend/libExtractor.AC3.so /lib/extend/libExtractor.AIFF.so /lib/extend/libExtractor.APE.so /lib/extend/libExtractor.ASF.so \
-/lib/extend/libExtractor.AVI.so /lib/extend/libExtractor.DSDIFF.so /lib/extend/libExtractor.DSF.so /lib/extend/libExtractor.DTS.so \
+/lib/extend/libExtractor.AVI.so /lib/extend/libExtractor.DTS.so \
 /lib/extend/libExtractor.FLAC.so /lib/extend/libExtractor.FLV.so /lib/extend/libExtractor.MP3.so /lib/extend/libExtractor.MPEG.so \
-/lib/extend/libExtractor.MPEG2TS.so /lib/extend/libExtractor.MPEG4.so /lib/extend/libExtractor.REALMEDIA.so /lib/extend/libExtractor.SCADISO.so \
+/lib/extend/libExtractor.MPEG2TS.so /lib/extend/libExtractor.MPEG4.so /lib/extend/libExtractor.REALMEDIA.so \
 /lib/extend/libExtractor.WAV.so /lib/extend/libExtractor.matroska.so \
 /bin/MtkCodecService /lib/libBnMtkCodec.so \
 "
@@ -91,7 +90,7 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
 /lib/libccci_util.so \
-/lib/libem_aitalk5.so /lib/libem_lte_jni.so /lib/libem_support_jni.so \
+/lib/libem_lte_jni.so /lib/libem_support_jni.so \
 /lib/libem_bt_jni.so /lib/libem_modem_jni.so /lib/libem_usb_jni.so \
 /lib/libem_gpio_jni.so /lib/libem_sensor_jni.so /lib/libem_wifi_jni.so \
 /bin/terservice /lib/libterservice.so \
@@ -113,7 +112,7 @@ BLUETOOTH="/bin/mtkbt \
 /lib/libpalsecurity.so /lib/libpalwlan_mtk.so \
 /lib/libbluetoothem_mtk.so /lib/libbluetooth_relayer.so \
 /lib/libbtem.so /lib/libbtpcm.so /lib/libbtsniff.so \
-/lib/libbt-aptX-ARM-4.2.2.so /lib/libsbccodec.so \
+/lib/libsbccodec.so \
 "
 
 CAMERA="/lib/hw/camera.mt6595.so \
@@ -133,7 +132,7 @@ SENSORS="/lib/hw/sensors.mt6595.so \
 /bin/geomagneticd /bin/magd /bin/orientationd \
 "
 
-GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW \
+GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW /xbin/MPED \
 /lib/libcurl.so /lib/libssladp.so /lib/libmnl.so \
 "
 
