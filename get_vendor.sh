@@ -28,7 +28,7 @@ GL="/vendor/bin/pvrsrvctl \
 /vendor/lib/libsrv_init.so /vendor/lib/libsrv_um.so /vendor/lib/libufwriter.so /vendor/lib/libusc.so \
 /lib/libm4u.so /lib/hw/hwcomposer.mt6595.so /lib/libbwc.so /lib/libgpu_aux.so /lib/libgralloc_extra.so \
 /lib/libdpframework.so /lib/libion.so /lib/libion_mtk.so /lib/libged.so /lib/libpq_prot.so \
-/lib/libgui_ext.so /lib/libui_ext.so /lib/libui.so \
+/lib/libgui_ext.so /lib/libui_ext.so /lib/libui.so /lib/librrc.so \
 /lib/libvcodecdrv.so /lib/libmp4enc_sa.ca7.so /lib/libvc1dec_sa.ca7.so /lib/libvcodec_oal.so \
 /lib/libvcodec_utility.so /lib/libvp8dec_sa.ca7.so /lib/libvp8enc_sa.ca7.so \
 /lib/libperfservice.so /lib/libperfservicenative.so \
@@ -90,16 +90,13 @@ RIL="/bin/md_ctrl /bin/muxreport \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
 /lib/libatciserv_jni.so /lib/libwifitest.so /lib/libaal.so /lib/libexttestmode.so \
 /lib/libccci_util.so \
-/lib/libem_lte_jni.so /lib/libem_support_jni.so \
-/lib/libem_bt_jni.so /lib/libem_modem_jni.so /lib/libem_usb_jni.so \
-/lib/libem_gpio_jni.so /lib/libem_sensor_jni.so /lib/libem_wifi_jni.so \
 /bin/terservice /lib/libterservice.so \
 "
 
 AUDIO="/lib/hw/audio.primary.mt6595.so /lib/libblisrc.so /lib/libspeech_enh_lib.so /lib/libaudiocustparam.so /lib/libaudiosetting.so \
 /lib/libaudiocompensationfilter.so /lib/libcvsd_mtk.so /lib/libmsbc_mtk.so /lib/libaudiocomponentengine.so \
 /lib/libblisrc32.so /lib/libbessound_hd_mtk.so /lib/libmtklimiter.so /lib/libmtkshifter.so /lib/libaudiodcrflt.so \
-/lib/libtfa9890_interface.so /lib/libtinyxml.so \
+/lib/libtfa9890_interface.so /lib/libtinyxml.so /lib/libtinycompress.so \
 /etc/tfa98xx/ /etc/audio_device.xml \
 "
 # bluetooth bits moved to individual section
@@ -116,12 +113,12 @@ BLUETOOTH="/bin/mtkbt \
 "
 
 CAMERA="/lib/hw/camera.mt6595.so \
-/lib/libcamera_client_mtk.so /lib/libcam.halsensor.so /lib/libcam_hwutils.so /lib/libcam_utils.so /lib/libmeizucamera.so /lib/libmmsdkservice.so \
+/lib/libcamera_client_mtk.so /lib/libcam.halsensor.so /lib/libcam_hwutils.so /lib/libcam_utils.so /lib/libmeizucamera.so /lib/libmeizu.camera.algo.so /lib/libmmsdkservice.so /lib/libmmsdkservice.feature.so \
 /lib/libcam1_utils.so /lib/libcamalgo.so /lib/libcam.camadapter.so /lib/libcam.camnode.so /lib/libcam.camshot.so /lib/libcam.client.so \
 /lib/libcam.common.meizu.so /lib/libcam.device1.so /lib/libcamdrv.so /lib/libcameracustom.so /lib/libcam.exif.so /lib/libcam.iopipe.so \
 /lib/libcam.jni.lomohaljni.so /lib/libcam.metadata.so /lib/libcam_mmp.so /lib/libcam.paramsmgr.so /lib/libcam_platform.so \
-/lib/libcam.sdkclient.so /lib/libcam.utils.sensorlistener.so /lib/libcam.utils.so \
-/lib/libfeatureio.so /lib/libimageio_plat_drv.so /lib/libimageio.so /lib/libmatv_cust.so \
+/lib/libcam.sdkclient.so /lib/libcam.utils.sensorlistener.so /lib/libcam.utils.so /lib/libcam.utils.cpuctrl.so \
+/lib/libdngop.so /lib/libfeatureio.so /lib/libimageio_plat_drv.so /lib/libimageio.so /lib/libmatv_cust.so \
 /lib/libmpoencoder.so /lib/libmpo.so \
 /lib/libmtk_mmutils.so /vendor/lib/libsfb.so /lib/libvideo_render.so /lib/libvideostabilizer.so \
 /lib/lib3a.so /lib/lib3a_sample.so /lib/libgraphite2.so /lib/libn3d3a.so /lib/libtiff.so /lib/libtouchfilter.so \
