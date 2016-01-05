@@ -54,7 +54,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 /lib/libJpgDecPipe.so /lib/libGdmaScalerPipe.so /lib/libSwJpgCodec.so /lib/libJpgEncPipe.so /lib/libmtkjpeg.so \
 /lib/libstagefright_amrnb_common.so /lib/libstagefright_avc_common.so /lib/libstagefright_enc_common.so \
 /lib/libstagefright_soft_ffmpegadec.so \
-/lib/extend/libCodec.adpcmdec.so /lib/extend/libCodec.alacdec.so /lib/extend/libCodec.ape.so \
+/lib/extend/libCodec.adt.so /lib/extend/libCodec.adpcmdec.so /lib/extend/libCodec.alacdec.so /lib/extend/libCodec.ape.so \
 /lib/extend/libCodec.dsddec.so /lib/extend/libCodec.dts.so /lib/extend/libCodec.lpcm.so /lib/extend/libCodec.mp3dec.so \
 /lib/extend/libCodec.mp3enc.so /lib/extend/libCodec.mpegdec.so /lib/extend/libCodec.radec.so /lib/extend/libCodec.raw.so \
 /lib/extend/libCodec.rvdec.so /lib/extend/libCodec.wmadec.so \
@@ -129,8 +129,8 @@ SENSORS="/lib/hw/sensors.mt6595.so \
 /bin/geomagneticd /bin/magd /bin/orientationd \
 "
 
-GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW \
-/lib/libcurl.so /lib/libssladp.so /lib/libmnl.so \
+GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW /xbin/MPED \
+/lib/libcurl.so /lib/libssladp.so /lib/libmnl.so /lib/libDR.so /lib/libfusion.so /lib/libmpe.driver.so /lib/libmpe.sensorlistener.so \
 "
 
 CHARGER="/bin/kpoc_charger /lib/libshowlogo.so /lib/libsuspend.so"
