@@ -26,7 +26,7 @@ GL="/vendor/bin/pvrsrvctl \
 /vendor/lib/libglslcompiler.so /vendor/lib/libIMGegl.so /vendor/lib/liboclcompiler.so \
 /vendor/lib/libpvrANDROID_WSEGL.so /vendor/lib/libPVROCL.so /vendor/lib/libPVRScopeServices.so \
 /vendor/lib/libsrv_init.so /vendor/lib/libsrv_um.so /vendor/lib/libufwriter.so /vendor/lib/libusc.so \
-/lib/libm4u.so /lib/hw/hwcomposer.mt6595.so /lib/libbwc.so /lib/libgpu_aux.so /lib/libgralloc_extra.so \
+/lib/libm4u.so /lib/hw/hwcomposer.mt6595.so /lib/libbwc.so /lib/libgpu_aux.so \
 /lib/libdpframework.so /lib/libion.so /lib/libion_mtk.so /lib/libged.so /lib/libpq_prot.so \
 /lib/libgui_ext.so /lib/libui_ext.so /lib/libstlport.so \
 /lib/libvcodecdrv.so /lib/libmp4enc_sa.ca7.so /lib/libvc1dec_sa.ca7.so /lib/libvcodec_oal.so \
