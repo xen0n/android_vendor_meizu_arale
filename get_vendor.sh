@@ -120,7 +120,7 @@ CAMERA="/lib/hw/camera.mt6595.so \
 /lib/libcam.sdkclient.so /lib/libcam.utils.sensorlistener.so /lib/libcam.utils.so /lib/libcam.utils.cpuctrl.so \
 /lib/libdngop.so /lib/libfeatureio.so /lib/libimageio_plat_drv.so /lib/libimageio.so /lib/libmatv_cust.so \
 /lib/libmpoencoder.so /lib/libmpo.so \
-/lib/libmtk_mmutils.so /vendor/lib/libsfb.so /lib/libvideo_render.so /lib/libvideostabilizer.so \
+/vendor/lib/libsfb.so /lib/libvideo_render.so /lib/libvideostabilizer.so \
 /lib/lib3a.so /lib/lib3a_sample.so /lib/libgraphite2.so /lib/libn3d3a.so /lib/libtiff.so /lib/libtouchfilter.so \
 "
 
