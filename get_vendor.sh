@@ -129,7 +129,7 @@ SENSORS="/lib/hw/sensors.mt6595.so \
 /bin/geomagneticd /bin/magd /bin/orientationd \
 "
 
-GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW /xbin/MPED \
+GPS="/lib/hw/gps.default.so /bin/wifi2agps /xbin/mnld /xbin/BGW /xbin/MPED \
 /lib/libcurl.so /lib/libssladp.so /lib/libmnl.so /lib/libDR.so /lib/libfusion.so /lib/libmpe.driver.so /lib/libmpe.sensorlistener.so \
 "
 
