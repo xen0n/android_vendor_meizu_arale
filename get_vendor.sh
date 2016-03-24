@@ -31,7 +31,6 @@ GL="/vendor/bin/pvrsrvctl \
 /lib/libstlport.so \
 /lib/libvcodecdrv.so /lib/libmp4enc_sa.ca7.so /lib/libvc1dec_sa.ca7.so /lib/libvcodec_oal.so \
 /lib/libvcodec_utility.so /lib/libvp8dec_sa.ca7.so /lib/libvp8enc_sa.ca7.so \
-/lib/libperfservice.so /lib/libperfservicenative.so \
 /bin/pq \
 "
 
