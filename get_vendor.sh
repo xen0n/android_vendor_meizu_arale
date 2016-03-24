@@ -39,8 +39,6 @@ GL="/vendor/bin/pvrsrvctl \
 DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
 /vendor/lib/drm/libdrmwvmplugin.so \
 /vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so \
-/lib/libdrmmtkutil.so /lib/libdrmmtkwhitelist.so \
-/lib/libnvramagentclient.so \
 /lib/drm/libdrmctaplugin.so /lib/drm/libdrmmtkplugin.so \
 "
 
@@ -84,7 +82,7 @@ CODECS="/etc/mtk_omx_core.cfg /lib/libstagefrighthw.so \
 RIL="/bin/md_ctrl /bin/muxreport \
 /lib/libaed.so \
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
-/lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
+/lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so \
 /bin/ccci_mdinit /bin/aee \
 /lib/libmdloggerrecycle.so /bin/ccci_fsd \
 /bin/atci_service /bin/atcid /bin/audiocmdservice_atci /bin/permission_check \
