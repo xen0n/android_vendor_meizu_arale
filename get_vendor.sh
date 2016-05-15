@@ -133,7 +133,7 @@ GPS="/lib/hw/gps.default.so /bin/mtk_agpsd /bin/wifi2agps /xbin/mnld /xbin/BGW /
 /lib/libcurl.so /lib/libssladp.so /lib/libmnl.so /lib/libDR.so /lib/libfusion.so /lib/libmpe.driver.so /lib/libmpe.sensorlistener.so \
 "
 
-CHARGER="/bin/kpoc_charger /lib/libshowlogo.so /lib/libsuspend.so"
+CHARGER="/lib/libsuspend.so"
 
 MISC="/bin/akmd8963 /bin/akmd8975 /bin/ami304d /bin/bmm050d /bin/mc6420d /bin/memsicd /bin/memsicd3416x \
 /bin/s62xd /bin/thermal /bin/thermald /bin/thermal_manager \
