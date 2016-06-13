@@ -36,10 +36,8 @@ GL="/vendor/bin/pvrsrvctl \
 "
 
 # Digital Restrictions Management
-DRM="/vendor/lib/libwvm.so /vendor/lib/libwvdrm_L3.so /vendor/lib/libWVStreamControlAPI_L3.so \
-/vendor/lib/drm/libdrmwvmplugin.so \
-/vendor/lib/mediadrm/libdrmclearkeyplugin.so /vendor/lib/mediadrm/libmockdrmcryptoplugin.so /vendor/lib/mediadrm/libwvdrmengine.so \
-/lib/drm/libdrmctaplugin.so /lib/drm/libdrmmtkplugin.so \
+DRM="\
+/vendor/lib/mediadrm/libmockdrmcryptoplugin.so \
 "
 
 # Codecs
