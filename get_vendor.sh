@@ -36,8 +36,8 @@ GL="/vendor/bin/pvrsrvctl \
 "
 
 # Digital Restrictions Management
+# all compiled!
 DRM="\
-/vendor/lib/mediadrm/libmockdrmcryptoplugin.so \
 "
 
 # Codecs
