@@ -180,5 +180,9 @@ for FILE in $SYSTEM ; do
   rsync -av --delete $S $T || exit 1
 done
 move_files
+
+# binary-patch libshowlogo.so to solve ABI incompatibility without additional code
+sed -i 's/_ZN7android5Fence4waitEj/_ZN7android5Fence4waitEi/g' lib/libshowlogo.so
+
 exit 0
 
